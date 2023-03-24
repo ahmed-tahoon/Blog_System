@@ -16,7 +16,7 @@ if (isset($_POST['add'])) {
     // Attempt to create the post
     if ($post->createPost($_POST['title'], $_POST['content'], $_SESSION['user_id'])) {
         // Redirect to the homepage or display a success message
-        header('Location: /Blog/index.php');
+        header('Location: /Blog_System/index.php');
         exit;
     } else {
         // Display an error message

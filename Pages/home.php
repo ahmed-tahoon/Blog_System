@@ -52,7 +52,6 @@ $posts = $post->readAllPosts();
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto py-4 py-lg-0">
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="">Home</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="">About</a></li>
                     <?php
                     if (!isset($_SESSION['user_id'])) {
                     ?>
@@ -88,7 +87,7 @@ $posts = $post->readAllPosts();
 
                 <?php foreach ($posts as $post) { ?>
                 <div class="post-preview">
-                    <a href="post.html">
+                    <a href=<?="Pages/post?id=". $post['id'] ?>>
                         <h2 class="post-title"><?php echo $post['title'] ?></h2>
                         <h3 class="post-subtitle"><?php echo $post['content']; ?></h3>
                     </a>
